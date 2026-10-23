@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dear You — Bespoke Gift Concierge & Curated Keepsakes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-logo">Dear You.</a>
+      <nav class="site-nav" aria-label="Main Navigation">
+        <a href="#showcase">Past Stories</a>
+        <a href="#concierge" class="btn btn-sm">Start a Gift</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="eyebrow">Bespoke Gifting Concierge</span>
+          <h1>The art of knowing them, <em>boxed.</em></h1>
+          <p class="hero-lead">
+            Tell us who they are, the quiet moments you share, and what makes them light up. 
+            We translate your memories into a one-of-a-kind curated gift box, anchored by a 
+            custom typeset letter on cotton paper.
+          </p>
+          <div class="hero-actions">
+            <a href="#concierge" class="btn btn-primary">Commission a Gift</a>
+            <a href="#showcase" class="btn btn-ghost">Explore Past Curations</a>
+          </div>
+          <div class="hero-trust">
+            <span>✦ 24-Hour Moodboard Turnaround</span>
+            <span>✦ Small-Batch Independent Makers</span>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="editorial-frame">
+            <img 
+              src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?auto=format&fit=crop&w=1000&q=80" 
+              alt="Curated gift box" 
+              class="hero-img"
+            />
+            <div class="floating-note">
+              <p class="note-quote">“For Clara, who turns every house into a sanctuary.”</p>
+              <span class="note-meta">Curation #042 — Warm Minimalist Tier</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOWCASE SECTION -->
+    <section id="showcase" class="showcase-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow">Curated Archive</span>
+          <h2>Every box begins with a sentence.</h2>
+          <p>We don't sell pre-packed SKUs. Here is how recent stories became tangible keepsakes.</p>
+        </div>
+
+        <div class="showcase-grid">
+          <article class="story-card">
+            <div class="story-meta">
+              <span class="badge">Housewarming</span>
+              <span class="price-tag">$135 Curation</span>
+            </div>
+            <blockquote class="story-prompt">
+              “She just moved to a rainy coastal town and misses our slow Sunday bakery runs.”
+            </blockquote>
+            <ul class="story-manifest">
+              <li><span>01</span> Speckled stoneware pour-over coffee dripper</li>
+              <li><span>02</span> Artisanal cardamom & brown butter shortbread</li>
+              <li><span>03</span> Hand-dipped beeswax taper candles in raw linen</li>
+              <li><span>04</span> Typeset keepsake letter sealed in terracotta wax</li>
+            </ul>
+          </article>
+
+          <article class="story-card">
+            <div class="story-meta">
+              <span class="badge">Anniversary</span>
+              <span class="price-tag">$190 Curation</span>
+            </div>
+            <blockquote class="story-prompt">
+              “He loves cooking late-night pasta, vinyl records, and smoky, woody scents.”
+            </blockquote>
+            <ul class="story-manifest">
+              <li><span>01</span> Cold-pressed Sicilian heritage olive oil in ceramic vessel</li>
+              <li><span>02</span> Hinoki & cedarwood incense cones with brass burner</li>
+              <li><span>03</span> Linen apron in washed espresso</li>
+              <li><span>04</span> Custom playlist QR card + cotton letterpress note</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUESTIONNAIRE SECTION -->
+    <section id="concierge" class="concierge-section">
+      <div class="container form-container">
+        <div class="form-intro">
+          <span class="eyebrow">Concierge Intake</span>
+          <h2>Tell us who we’re celebrating.</h2>
+          <p>
+            Take three minutes to share their vibe. Within 24 hours, our curator will send a bespoke 
+            visual proposal to your inbox—no payment required until you love the selection.
+          </p>
+        </div>
+
+        <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="concierge-form">
+          <fieldset class="form-step">
+            <legend><span class="step-num">01</span> The Recipient & Moment</legend>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="recipient_name">Who is this gift for? *</label>
+                <input type="text" id="recipient_name" name="recipient_name" placeholder="First name (e.g., Julian)" required />
+              </div>
+              <div class="field-group">
+                <label for="relationship">Your relationship to them *</label>
+                <select id="relationship" name="relationship" required>
+                  <option value="" disabled selected>Select relationship...</option>
+                  <option value="Partner">Partner / Spouse</option>
+                  <option value="Friend">Close Friend</option>
+                  <option value="Family">Family Member</option>
+                  <option value="Client">Client / Collaborator</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label>What is the occasion? *</label>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="radio" name="occasion" value="Birthday" required />
+                  <span>Birthday</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="occasion" value="Anniversary" />
+                  <span>Anniversary</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="occasion" value="Milestone" />
+                  <span>Milestone</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="occasion" value="Just Because" />
+                  <span>Just Because</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step">
+            <legend><span class="step-num">02</span> Their World & Aesthetic</legend>
+            <div class="field-group">
+              <label>Which textures & moods feel most like them?</label>
+              <div class="vibe-grid">
+                <label class="vibe-card">
+                  <input type="checkbox" name="aesthetic_vibe" value="Warm Minimalist" />
+                  <span class="vibe-title">Warm Minimalist</span>
+                  <span class="vibe-desc">Unbleached linen, raw ceramics, quiet rituals.</span>
+                </label>
+                <label class="vibe-card">
+                  <input type="checkbox" name="aesthetic_vibe" value="Gourmet & Social" />
+                  <span class="vibe-title">The Host & Epicure</span>
+                  <span class="vibe-desc">Small-batch olive oils, aperitivo hour, tablewares.</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="sunday_ritual">How do they spend an ideal slow Sunday? *</label>
+              <textarea id="sunday_ritual" name="sunday_ritual" rows="3" placeholder="e.g., Making matcha, reading..." required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step">
+            <legend><span class="step-num">03</span> The "Dear You" Letter</legend>
+            <div class="field-group">
+              <label for="letter_content">Your personal note *</label>
+              <textarea id="letter_content" name="letter_content" rows="4" placeholder="Write the message you want printed on cotton paper..." required></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-step">
+            <legend><span class="step-num">04</span> Investment & Timeline</legend>
+            <div class="field-group">
+              <label>Select a Curation Tier *</label>
+              <div class="pill-grid">
+                <label class="pill-option">
+                  <input type="radio" name="budget_tier" value="Gesture ($85-$120)" required />
+                  <span><strong>The Gesture</strong> ($85–$120)</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="budget_tier" value="Signature ($125-$185)" />
+                  <span><strong>The Signature</strong> ($125–$185)</span>
+                </label>
+                <label class="pill-option">
+                  <input type="radio" name="budget_tier" value="Heirloom ($200+)" />
+                  <span><strong>The Heirloom</strong> ($200+)</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="field-row">
+              <div class="field-group">
+                <label for="target_date">Ideal delivery date *</label>
+                <input type="date" id="target_date" name="target_date" required />
+              </div>
+              <div class="field-group">
+                <label for="sender_name">Your Name *</label>
+                <input type="text" id="sender_name" name="sender_name" required />
+              </div>
+              <div class="field-group">
+                <label for="sender_email">Your Email *</label>
+                <input type="email" id="sender_email" name="sender_email" required />
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary btn-full">Request My Custom Proposal</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="brand-logo">Dear You.</p>
+      <p class="footer-copy">© 2026 Dear You Concierge. Thoughtfully curated, unmistakably yours.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

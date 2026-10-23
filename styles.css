@@ -1,8 +1,4 @@
-/* ==========================================================================
-   1. DESIGN TOKENS & RESET
-   ========================================================================== */
 :root {
-  /* Color Palette: Warm Editorial Neutrals & Terracotta */
   --bg-cream: #FAF7F2;
   --bg-sand: #F2ECE1;
   --bg-card: #FFFFFF;
@@ -10,20 +6,14 @@
   --text-muted: #6E6259;
   --accent-terracotta: #C86D51;
   --accent-terracotta-dark: #A9543B;
-  --accent-sage: #7A8B7B;
   --border-subtle: #E2D9CC;
-
-  /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-
-  /* Spacing & Layout */
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
   --container-max: 1140px;
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-pill: 999px;
   --shadow-soft: 0 12px 32px -8px rgba(44, 34, 30, 0.07);
-  --transition: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -32,22 +22,13 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 16px;
-}
-
 body {
   background-color: var(--bg-cream);
   color: var(--text-espresso);
   font-family: var(--font-sans);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
-/* ==========================================================================
-   2. TYPOGRAPHY & GLOBAL UTILITIES
-   ========================================================================== */
 h1, h2, h3, blockquote {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -55,8 +36,7 @@ h1, h2, h3, blockquote {
 }
 
 h1 {
-  font-size: clamp(2.75rem, 5vw, 4.25rem);
-  letter-spacing: -0.02em;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   margin-bottom: 1.25rem;
 }
 
@@ -86,12 +66,10 @@ h2 {
   margin: 0 auto;
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-sans);
   font-size: 0.95rem;
   font-weight: 500;
   text-decoration: none;
@@ -99,7 +77,7 @@ h2 {
   border-radius: var(--radius-pill);
   border: 1px solid transparent;
   cursor: pointer;
-  transition: var(--transition);
+  transition: 0.2s ease;
 }
 
 .btn-sm {
@@ -116,7 +94,6 @@ h2 {
 
 .btn-primary:hover {
   background-color: var(--accent-terracotta-dark);
-  transform: translateY(-1px);
 }
 
 .btn-ghost {
@@ -125,25 +102,17 @@ h2 {
   color: var(--text-espresso);
 }
 
-.btn-ghost:hover {
-  border-color: var(--text-espresso);
-  background-color: var(--bg-sand);
-}
-
 .btn-full {
   width: 100%;
   font-size: 1.05rem;
   padding: 1.1rem;
 }
 
-/* ==========================================================================
-   3. NAVIGATION & HERO
-   ========================================================================== */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(250, 247, 242, 0.88);
+  background: rgba(250, 247, 242, 0.9);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border-subtle);
   padding: 1rem 0;
@@ -161,7 +130,6 @@ h2 {
   font-weight: 600;
   color: var(--text-espresso);
   text-decoration: none;
-  letter-spacing: -0.02em;
 }
 
 .site-nav {
@@ -174,11 +142,6 @@ h2 {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.9rem;
-  transition: color 0.2s;
-}
-
-.site-nav a:not(.btn):hover {
-  color: var(--text-espresso);
 }
 
 .hero {
@@ -196,12 +159,10 @@ h2 {
   font-size: 1.125rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
-  max-width: 54ch;
 }
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
   gap: 1rem;
   margin-bottom: 2.5rem;
 }
@@ -225,7 +186,7 @@ h2 {
 
 .hero-img {
   width: 100%;
-  height: 480px;
+  height: 460px;
   object-fit: cover;
   border-radius: var(--radius-sm);
   display: block;
@@ -247,19 +208,13 @@ h2 {
   font-family: var(--font-serif);
   font-style: italic;
   font-size: 1.15rem;
-  margin-bottom: 0.35rem;
 }
 
 .note-meta {
   font-size: 0.75rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
-/* ==========================================================================
-   4. SHOWCASE SECTION
-   ========================================================================== */
 .showcase-section {
   padding: 5rem 0;
   background-color: var(--bg-sand);
@@ -271,10 +226,6 @@ h2 {
   text-align: center;
   max-width: 620px;
   margin: 0 auto 3.5rem;
-}
-
-.section-header p {
-  color: var(--text-muted);
 }
 
 .showcase-grid {
@@ -296,7 +247,6 @@ h2 {
 .story-meta {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   font-size: 0.8rem;
 }
 
@@ -304,17 +254,11 @@ h2 {
   background: var(--bg-sand);
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-pill);
-  font-weight: 500;
-}
-
-.price-tag {
-  color: var(--text-muted);
 }
 
 .story-prompt {
   font-size: 1.45rem;
   font-style: italic;
-  color: var(--text-espresso);
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border-subtle);
 }
@@ -335,9 +279,6 @@ h2 {
   margin-right: 0.5rem;
 }
 
-/* ==========================================================================
-   5. CONCIERGE DISCOVERY FORM
-   ========================================================================== */
 .concierge-section {
   padding: 6rem 0;
 }
@@ -351,12 +292,6 @@ h2 {
   margin-bottom: 3rem;
 }
 
-.form-intro p {
-  color: var(--text-muted);
-  max-width: 56ch;
-  margin: 0 auto;
-}
-
 .concierge-form {
   background: var(--bg-card);
   padding: 3rem;
@@ -367,24 +302,15 @@ h2 {
 
 .form-step {
   border: none;
-  margin-bottom: 2.75rem;
-  padding-bottom: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
   border-bottom: 1px solid var(--border-subtle);
-}
-
-.form-step:last-of-type {
-  border-bottom: none;
-  margin-bottom: 1.5rem;
-  padding-bottom: 0;
 }
 
 .form-step legend {
   font-family: var(--font-serif);
   font-size: 1.65rem;
   margin-bottom: 1.5rem;
-  display: flex;
-  align-items: baseline;
-  gap: 0.75rem;
 }
 
 .step-num {
@@ -392,6 +318,7 @@ h2 {
   font-family: var(--font-sans);
   color: var(--accent-terracotta);
   font-weight: 600;
+  margin-right: 0.5rem;
 }
 
 .field-row {
@@ -410,7 +337,6 @@ h2 {
 label {
   font-size: 0.875rem;
   font-weight: 500;
-  color: var(--text-espresso);
 }
 
 input[type="text"],
@@ -425,19 +351,8 @@ textarea {
   background-color: var(--bg-cream);
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  color: var(--text-espresso);
-  transition: border-color 0.2s;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--accent-terracotta);
-  background-color: #FFF;
-}
-
-/* Interactive Pills & Vibe Cards */
 .pill-grid {
   display: flex;
   flex-wrap: wrap;
@@ -447,7 +362,6 @@ textarea:focus {
 .pill-option input {
   position: absolute;
   opacity: 0;
-  pointer-events: none;
 }
 
 .pill-option span {
@@ -458,13 +372,11 @@ textarea:focus {
   border-radius: var(--radius-pill);
   font-size: 0.875rem;
   cursor: pointer;
-  transition: var(--transition);
 }
 
 .pill-option input:checked + span {
   background: var(--text-espresso);
   color: var(--bg-cream);
-  border-color: var(--text-espresso);
 }
 
 .vibe-grid {
@@ -482,7 +394,6 @@ textarea:focus {
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: var(--transition);
 }
 
 .vibe-card input {
@@ -494,7 +405,6 @@ textarea:focus {
   font-family: var(--font-serif);
   font-size: 1.2rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
 }
 
 .vibe-desc {
@@ -502,50 +412,18 @@ textarea:focus {
   color: var(--text-muted);
 }
 
-.vibe-card:has(input:checked) {
-  border-color: var(--accent-terracotta);
-  background-color: #FDF9F6;
-  box-shadow: 0 0 0 1px var(--accent-terracotta);
-}
-
-.form-disclaimer {
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-top: 0.85rem;
-}
-
-/* ==========================================================================
-   6. FOOTER & RESPONSIVE BREAKPOINTS
-   ========================================================================== */
 .site-footer {
   padding: 3rem 0;
   border-top: 1px solid var(--border-subtle);
   text-align: center;
 }
 
-.footer-copy {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-top: 0.5rem;
-}
-
 @media (max-width: 860px) {
   .hero-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
   }
-
   .floating-note {
     left: 1rem;
     bottom: 1rem;
-  }
-
-  .concierge-form {
-    padding: 1.75rem;
-  }
-
-  .site-nav a:not(.btn) {
-    display: none;
   }
 }
